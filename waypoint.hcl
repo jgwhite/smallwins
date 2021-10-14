@@ -1,4 +1,4 @@
-project = "example"
+project = "smallwins"
 
 variable "registry_username" {
   type    = string
@@ -14,7 +14,7 @@ runner {
   enabled = true
 }
 
-app "web" {
+app "website" {
   build {
     use "docker" {
       buildkit = true
@@ -22,7 +22,7 @@ app "web" {
 
     registry {
       use "docker" {
-        image    = "jgwhite/waypoint-example"
+        image    = "jgwhite/smallwins"
         tag      = gitrefpretty()
         local    = false
         username = var.registry_username
