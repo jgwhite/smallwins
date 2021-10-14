@@ -33,18 +33,6 @@ app "website" {
 
   deploy {
     use "kubernetes" {
-      pod {
-        container {
-          probe {
-            timeout = 120
-          }
-        }
-      }
-    }
-  }
-
-  release {
-    use "kubernetes" {
       cpu {
         request = "250m"
         limit   = "500m"
@@ -55,7 +43,11 @@ app "website" {
         max_replicas = 5
         cpu_percent  = 75
       }
+    }
+  }
 
+  release {
+    use "kubernetes" {
       ingress "http" {
         annotations = {
           "kubernetes.io/ingress.class" = "nginx"
