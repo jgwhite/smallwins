@@ -45,6 +45,17 @@ app "website" {
 
   release {
     use "kubernetes" {
+      cpu {
+        request = "250m"
+        limit   = "500m"
+      }
+
+      autoscale {
+        min_replicas = 2
+        max_replicas = 5
+        cpu_percent  = 75
+      }
+
       ingress "http" {
         annotations = {
           "kubernetes.io/ingress.class" = "nginx"
