@@ -39,7 +39,7 @@ app "website" {
       }
 
       autoscale {
-        min_replicas = 2
+        min_replicas = 1
         max_replicas = 5
         cpu_percent  = 75
       }
