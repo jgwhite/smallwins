@@ -15,6 +15,15 @@ runner {
 }
 
 app "website" {
+  config {
+    file = {
+      "/test" = configdynamic("vault", {
+        path = "secret/data/webapp/config"
+        key  = "test"
+      })
+    }
+  }
+
   build {
     use "docker" {
       buildkit = true
