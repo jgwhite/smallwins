@@ -10,10 +10,6 @@ variable "registry_password" {
   default = ""
 }
 
-runner {
-  enabled = true
-}
-
 app "website" {
   build {
     use "docker" {
