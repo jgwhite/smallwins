@@ -1,5 +1,13 @@
 project = "smallwins"
 
+runner {
+  enabled = true
+
+  data_source "git" {
+    url = "https://github.com/jgwhite/smallwins.git"
+  }
+}
+
 variable "registry_username" {
   type    = string
   default = ""
