@@ -5,6 +5,7 @@ runner {
 
   data_source "git" {
     url = "https://github.com/jgwhite/smallwins.git"
+    ref = "main"
   }
 }
 
@@ -20,7 +21,9 @@ variable "registry_password" {
 
 app "website" {
   build {
-    use "docker" {}
+    use "docker" {
+      buildkit = false
+    }
 
     registry {
       use "docker" {
