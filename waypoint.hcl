@@ -20,9 +20,7 @@ variable "registry_password" {
 
 app "website" {
   build {
-    use "docker" {
-      buildkit = true
-    }
+    use "docker" {}
 
     registry {
       use "docker" {
