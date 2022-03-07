@@ -22,12 +22,13 @@ variable "registry_password" {
 app "website" {
   build {
     use "docker" {
-      buildkit = false
+      buildkit = true
+      platform = "amd64"
     }
 
     registry {
       use "docker" {
-        image    = "jgwhite/smallwins"
+        image    = "jgwhitehashicorp/smallwins"
         tag      = gitrefpretty()
         local    = false
         username = var.registry_username
