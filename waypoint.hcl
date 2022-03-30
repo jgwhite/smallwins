@@ -15,7 +15,7 @@ app "website" {
 
     registry {
       use "docker" {
-        image = "registry.registry.svc.cluster.local/jgwhite/smallwins"
+        image = "registry.registry.svc.cluster.local:30000/jgwhite/smallwins"
         tag   = gitrefpretty()
       }
     }
