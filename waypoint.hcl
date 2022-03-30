@@ -26,6 +26,8 @@ app "website" {
   }
 
   release {
-    use "kubernetes" {}
+    use "kubernetes" {
+      node_port = 30001
+    }
   }
 }
