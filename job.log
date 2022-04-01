@@ -1,0 +1,119 @@
+2022-04-01T12:42:03.130Z [INFO]  waypoint: waypoint version: full_string="v0.7.0-706-gd886fdccc (d886fdccc+CHANGES)" version=v0.7.0-706-gd886fdccc prerelease="" metadata="" revision=d886fdccc+CHANGES
+2022-04-01T12:42:03.131Z [DEBUG] waypoint: home configuration directory: path=/root/.config/waypoint
+2022-04-01T12:42:03.131Z [INFO]  waypoint.server: attempting to source credentials and connect
+2022-04-01T12:42:03.131Z [DEBUG] waypoint.serverclient: connection information: address=api.hashicorp.cloud:443 tls=true tls_skip_verify=false send_auth=true has_token=true
+2022-04-01T12:42:03.399Z [DEBUG] waypoint.server: connection established with sourced credentials
+2022-04-01T12:42:03.496Z [INFO]  waypoint: server version info: version=v0.7.0 api_min=1 api_current=1 entrypoint_min=1 entrypoint_current=1
+2022-04-01T12:42:03.496Z [INFO]  waypoint: negotiated api version: version=1
+2022-04-01T12:42:03.496Z [INFO]  waypoint.runner.agent: sourcing credentials and connecting to the Waypoint server
+
+» Runner configuration:
+  Server address: api.hashicorp.cloud:443
+            Type: on-demand
+
+
+» Runner logs:
+
+2022-04-01T12:42:03.753Z [INFO]  waypoint.runner.agent: initializing the runner
+2022-04-01T12:42:03.753Z [DEBUG] waypoint.runner.agent.runner: Created runner: id=01FZJJB6KXR2S4WJ5JFM527MYJ
+2022-04-01T12:42:03.753Z [INFO]  waypoint.runner.agent: starting runner: id=01FZJJB6KXR2S4WJ5JFM527MYJ
+2022-04-01T12:42:03.753Z [WARN]  waypoint.runner.agent.runner: cookie not set for runner, will skip adoption process
+2022-04-01T12:42:03.753Z [DEBUG] waypoint.runner.agent.runner: starting RunnerConfig stream
+2022-04-01T12:42:03.753Z [DEBUG] waypoint.runner.agent.runner: waiting for registration
+2022-04-01T12:42:03.754Z [DEBUG] waypoint.runner.agent.runner.config: registering instance, requesting config
+2022-04-01T12:42:03.895Z [DEBUG] waypoint.runner.agent.runner.config_recv: first config received, switching config state to true
+2022-04-01T12:42:03.895Z [INFO]  waypoint.runner.agent.runner.config_recv: new configuration received
+2022-04-01T12:42:03.895Z [DEBUG] waypoint.runner.agent.runner.config.watcher.watchloop: new config variables received, scheduling refresh
+2022-04-01T12:42:03.895Z [DEBUG] waypoint.runner.agent.runner: runner registered, waiting for first config processing
+2022-04-01T12:42:04.396Z [DEBUG] waypoint.runner.agent.runner.config.watcher.watchloop: new configuration computed
+2022-04-01T12:42:04.396Z [INFO]  waypoint.runner.agent.runner: runner registered with server and ready
+2022-04-01T12:42:04.396Z [DEBUG] waypoint.runner.agent.runner: opening job stream: retry=false
+2022-04-01T12:42:04.396Z [INFO]  waypoint.runner.agent.runner: waiting for job assignment
+2022-04-01T12:42:04.512Z [INFO]  waypoint.runner.agent.runner: job assignment received: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build
+2022-04-01T12:42:04.512Z [INFO]  waypoint.runner.agent.runner: starting job execution: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build
+2022-04-01T12:42:04.747Z [INFO]  waypoint.runner.agent.runner.config_recv: new configuration received
+2022-04-01T12:42:04.973Z [DEBUG] waypoint.runner.agent.runner: job data downloaded (or local): job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build pwd=/kaniko/tmp/waypoint2299629257 ref="&gen.Job_DataSource_Ref{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(nil)}, sizeCache:0, unknownFields:[]uint8(nil), Ref:(*gen.Job_DataSource_Ref_Git)(0xc0002088e0)}"
+2022-04-01T12:42:04.973Z [DEBUG] waypoint.runner.agent.runner: sending download event: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build
+2022-04-01T12:42:05.082Z [DEBUG] waypoint.runner.agent.runner: plugin search path: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build path=["/kaniko/tmp/waypoint2299629257", "/kaniko/tmp/waypoint2299629257/.waypoint/plugins", "/root/.config/waypoint/plugins", "/root/.config/.waypoint/plugins"]
+2022-04-01T12:42:05.082Z [DEBUG] waypoint.runner.agent.runner: searching for plugin: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build plugin_name=docker
+2022-04-01T12:42:05.082Z [DEBUG] waypoint.runner.agent.runner: plugin found as builtin: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build plugin_name=docker
+2022-04-01T12:42:05.082Z [INFO]  waypoint.runner.agent.runner: register: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build plugin_name=docker type=Mapper nil=false
+2022-04-01T12:42:05.082Z [INFO]  waypoint.runner.agent.runner: register: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build plugin_name=docker type=Builder nil=false
+2022-04-01T12:42:05.082Z [INFO]  waypoint.runner.agent.runner: register: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build plugin_name=docker type=Registry nil=false
+2022-04-01T12:42:05.082Z [DEBUG] waypoint.runner.agent.runner: searching for plugin: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build plugin_name=kubernetes
+2022-04-01T12:42:05.082Z [DEBUG] waypoint.runner.agent.runner: plugin found as builtin: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build plugin_name=kubernetes
+2022-04-01T12:42:05.082Z [INFO]  waypoint.runner.agent.runner: register: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build plugin_name=kubernetes type=Mapper nil=false
+2022-04-01T12:42:05.082Z [INFO]  waypoint.runner.agent.runner: register: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build plugin_name=kubernetes type=Platform nil=false
+2022-04-01T12:42:05.082Z [INFO]  waypoint.runner.agent.runner: register: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build plugin_name=kubernetes type=ReleaseManager nil=false
+2022-04-01T12:42:05.181Z [DEBUG] waypoint.runner.agent.runner: setting final set of variable values on the job: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build
+2022-04-01T12:42:05.182Z [DEBUG] waypoint.runner.agent.runner.app.website: loading mapper plugin: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build name=kubernetes
+2022-04-01T12:42:05.182Z [INFO]  waypoint.runner.agent.runner.app.website.mapper: launching plugin: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build type=Mapper path=/kaniko/waypoint args=["/kaniko/waypoint", "plugin", "kubernetes"]
+2022-04-01T12:42:05.183Z [DEBUG] waypoint.runner.agent.runner.app.website.mapper: starting plugin: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build path=/kaniko/waypoint args=["/kaniko/waypoint", "plugin", "kubernetes"]
+2022-04-01T12:42:05.183Z [DEBUG] waypoint.runner.agent.runner.app.website.mapper: plugin started: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build path=/kaniko/waypoint pid=14
+2022-04-01T12:42:05.183Z [DEBUG] waypoint.runner.agent.runner.app.website.mapper: waiting for RPC address: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build path=/kaniko/waypoint
+2022-04-01T12:42:05.232Z [DEBUG] waypoint.runner.agent.runner.app.website.mapper: using plugin: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build version=1
+2022-04-01T12:42:05.232Z [DEBUG] waypoint.runner.agent.runner.app.website.mapper.waypoint: plugin address: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build @module=plugin address=/kaniko/tmp/plugin2007992245 network=unix timestamp=2022-04-01T12:42:05.231Z
+2022-04-01T12:42:05.238Z [DEBUG] waypoint.runner.agent.runner.app.website.mapper: plugin successfully launched and connected: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build
+2022-04-01T12:42:05.238Z [INFO]  waypoint.runner.agent.runner.app.website.mapper: initialized component: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build type=Mapper
+2022-04-01T12:42:05.238Z [DEBUG] waypoint.runner.agent.runner.app.website: no mappers advertised by plugin, closing: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build name=kubernetes
+2022-04-01T12:42:05.238Z [DEBUG] waypoint.runner.agent.runner.app.website.mapper.stdio: received EOF, stopping recv loop: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2022-04-01T12:42:05.240Z [DEBUG] waypoint.runner.agent.runner.app.website.mapper: plugin process exited: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build path=/kaniko/waypoint pid=14
+2022-04-01T12:42:05.240Z [DEBUG] waypoint.runner.agent.runner.app.website.mapper: plugin exited: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build
+2022-04-01T12:42:05.240Z [DEBUG] waypoint.runner.agent.runner.app.website: loading mapper plugin: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build name=docker
+2022-04-01T12:42:05.241Z [INFO]  waypoint.runner.agent.runner.app.website.mapper: launching plugin: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build type=Mapper path=/kaniko/waypoint args=["/kaniko/waypoint", "plugin", "docker"]
+2022-04-01T12:42:05.241Z [DEBUG] waypoint.runner.agent.runner.app.website.mapper: starting plugin: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build path=/kaniko/waypoint args=["/kaniko/waypoint", "plugin", "docker"]
+2022-04-01T12:42:05.241Z [DEBUG] waypoint.runner.agent.runner.app.website.mapper: plugin started: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build path=/kaniko/waypoint pid=21
+2022-04-01T12:42:05.241Z [DEBUG] waypoint.runner.agent.runner.app.website.mapper: waiting for RPC address: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build path=/kaniko/waypoint
+2022-04-01T12:42:05.290Z [DEBUG] waypoint.runner.agent.runner.app.website.mapper.waypoint: plugin address: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build @module=plugin address=/kaniko/tmp/plugin1368994408 network=unix timestamp=2022-04-01T12:42:05.290Z
+2022-04-01T12:42:05.290Z [DEBUG] waypoint.runner.agent.runner.app.website.mapper: using plugin: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build version=1
+2022-04-01T12:42:05.292Z [DEBUG] waypoint.runner.agent.runner.app.website.mapper: plugin successfully launched and connected: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build
+2022-04-01T12:42:05.292Z [INFO]  waypoint.runner.agent.runner.app.website.mapper: initialized component: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build type=Mapper
+2022-04-01T12:42:05.292Z [DEBUG] waypoint.runner.agent.runner.app.website: no mappers advertised by plugin, closing: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build name=docker
+2022-04-01T12:42:05.292Z [DEBUG] waypoint.runner.agent.runner.app.website.mapper.stdio: received EOF, stopping recv loop: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2022-04-01T12:42:05.294Z [DEBUG] waypoint.runner.agent.runner.app.website.mapper: plugin process exited: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build path=/kaniko/waypoint pid=21
+2022-04-01T12:42:05.294Z [DEBUG] waypoint.runner.agent.runner.app.website.mapper: plugin exited: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build
+2022-04-01T12:42:05.294Z [INFO]  waypoint.runner.agent.runner: project initialized: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build workspace=default
+2022-04-01T12:42:05.294Z [INFO]  waypoint.runner.agent.runner: executing operation: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build
+2022-04-01T12:42:05.294Z [INFO]  waypoint.runner.agent.runner.app.website.builder: launching plugin: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build type=Builder path=/kaniko/waypoint args=["/kaniko/waypoint", "plugin", "docker"]
+2022-04-01T12:42:05.294Z [DEBUG] waypoint.runner.agent.runner.app.website.builder: starting plugin: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build path=/kaniko/waypoint args=["/kaniko/waypoint", "plugin", "docker"]
+2022-04-01T12:42:05.294Z [DEBUG] waypoint.runner.agent.runner.app.website.builder: plugin started: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build path=/kaniko/waypoint pid=28
+2022-04-01T12:42:05.294Z [DEBUG] waypoint.runner.agent.runner.app.website.builder: waiting for RPC address: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build path=/kaniko/waypoint
+2022-04-01T12:42:05.341Z [DEBUG] waypoint.runner.agent.runner.app.website.builder: using plugin: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build version=1
+2022-04-01T12:42:05.341Z [DEBUG] waypoint.runner.agent.runner.app.website.builder.waypoint: plugin address: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build @module=plugin address=/kaniko/tmp/plugin1167752689 network=unix timestamp=2022-04-01T12:42:05.341Z
+2022-04-01T12:42:05.343Z [DEBUG] waypoint.runner.agent.runner.app.website.builder: plugin successfully launched and connected: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build
+2022-04-01T12:42:05.343Z [INFO]  waypoint.runner.agent.runner.app.website.builder: initialized component: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build type=Builder
+2022-04-01T12:42:05.344Z [INFO]  waypoint.runner.agent.runner.app.website.registry: launching plugin: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build type=Registry path=/kaniko/waypoint args=["/kaniko/waypoint", "plugin", "docker"]
+2022-04-01T12:42:05.344Z [DEBUG] waypoint.runner.agent.runner.app.website.registry: starting plugin: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build path=/kaniko/waypoint args=["/kaniko/waypoint", "plugin", "docker"]
+2022-04-01T12:42:05.345Z [DEBUG] waypoint.runner.agent.runner.app.website.registry: plugin started: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build path=/kaniko/waypoint pid=35
+2022-04-01T12:42:05.345Z [DEBUG] waypoint.runner.agent.runner.app.website.registry: waiting for RPC address: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build path=/kaniko/waypoint
+2022-04-01T12:42:05.402Z [DEBUG] waypoint.runner.agent.runner.app.website.registry: using plugin: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build version=1
+2022-04-01T12:42:05.403Z [DEBUG] waypoint.runner.agent.runner.app.website.registry.waypoint: plugin address: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build @module=plugin address=/kaniko/tmp/plugin334077742 network=unix timestamp=2022-04-01T12:42:05.402Z
+2022-04-01T12:42:05.404Z [DEBUG] waypoint.runner.agent.runner.app.website.registry: plugin successfully launched and connected: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build
+2022-04-01T12:42:05.404Z [INFO]  waypoint.runner.agent.runner.app.website.registry: initialized component: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build type=Registry
+2022-04-01T12:42:05.407Z [DEBUG] waypoint.runner.agent.runner.app.website.build: creating metadata on server: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build
+2022-04-01T12:42:05.528Z [DEBUG] waypoint.runner.agent.runner.app.website.build: running local operation: id=01FZJJBARQZH48NTPR2HZ0TBB9 job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build
+2022-04-01T12:42:05.535Z [ERROR] waypoint.runner.agent.runner.app.website.registry.waypoint: CALLING ACCESS: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build @module=plugin fn="(func() (*docker.AccessInfo, error))(0x1415de0)" target=*docker.Registry timestamp=2022-04-01T12:42:05.534Z
+2022-04-01T12:42:05.536Z [DEBUG] waypoint.runner.agent.runner.app.website.build: injected access info: id=01FZJJBARQZH48NTPR2HZ0TBB9 job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build
+2022-04-01T12:42:05.536Z [DEBUG] waypoint.runner.agent.runner.app.website.builder: Running in ODR mode, attempting to retrieve ODR build spec: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build
+2022-04-01T12:42:05.551Z [DEBUG] waypoint.runner.agent.runner.app.website.builder.waypoint: loaded Docker context: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build @module=waypoint.runner.agent.runner.app.website.build context_dir=/kaniko/tmp/waypoint2299629257 dockerfile=Dockerfile timestamp=2022-04-01T12:42:05.551Z
+2022-04-01T12:42:05.552Z [INFO]  waypoint.runner.agent.runner.app.website.builder.waypoint: executing build via kaniko: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build @module=waypoint.runner.agent.runner.app.website.build timestamp=2022-04-01T12:42:05.551Z
+2022-04-01T12:42:05.572Z [DEBUG] waypoint.runner.agent.runner.app.website.builder.waypoint: sending ping request to /v2/ to test authentication: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build @module=waypoint.runner.agent.runner.app.website.build timestamp=2022-04-01T12:42:05.572Z
+2022-04-01T12:42:05.574Z [DEBUG] waypoint.runner.agent.runner.app.website.builder.waypoint: response from ping: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build @module=waypoint.runner.agent.runner.app.website.build status="401 Unauthorized" timestamp=2022-04-01T12:42:05.574Z
+2022-04-01T12:42:05.574Z [WARN]  waypoint.runner.agent.runner.app.website.build: error during local operation: id=01FZJJBARQZH48NTPR2HZ0TBB9 job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build err="rpc error: code = Unknown desc = unable to negotiate with upstream: Unexpected status: 401 Unauthorized"
+2022-04-01T12:42:05.687Z [DEBUG] waypoint.runner.agent.runner.app.website.build: metadata marked as complete: id=01FZJJBARQZH48NTPR2HZ0TBB9 job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build
+2022-04-01T12:42:05.688Z [DEBUG] waypoint.runner.agent.runner.app.website.registry.stdio: received EOF, stopping recv loop: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2022-04-01T12:42:05.689Z [DEBUG] waypoint.runner.agent.runner.app.website.registry: plugin process exited: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build path=/kaniko/waypoint pid=35
+2022-04-01T12:42:05.689Z [DEBUG] waypoint.runner.agent.runner.app.website.registry: plugin exited: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build
+2022-04-01T12:42:05.690Z [DEBUG] waypoint.runner.agent.runner.app.website.builder.stdio: received EOF, stopping recv loop: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2022-04-01T12:42:05.692Z [DEBUG] waypoint.runner.agent.runner.app.website.builder: plugin process exited: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build path=/kaniko/waypoint pid=28
+2022-04-01T12:42:05.692Z [DEBUG] waypoint.runner.agent.runner.app.website.builder: plugin exited: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build
+2022-04-01T12:42:05.692Z [DEBUG] waypoint.runner.agent.runner: closing project: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build
+2022-04-01T12:42:05.692Z [DEBUG] waypoint.runner.agent.runner: cleaning up downloaded data: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build
+2022-04-01T12:42:05.693Z [DEBUG] waypoint.runner.agent.runner: job finished: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build error="rpc error: code = Unknown desc = unable to negotiate with upstream: Unexpected status: 401 Unauthorized"
+2022-04-01T12:42:05.693Z [WARN]  waypoint.runner.agent.runner: error during job execution: job_id=01FZJJ10VGA8PRFR57N008S2TM job_op=*gen.Job_Build err="rpc error: code = Unknown desc = unable to negotiate with upstream: Unexpected status: 401 Unauthorized"
+2022-04-01T12:42:05.753Z [INFO]  waypoint.runner.agent.runner.config_recv: new configuration received
+2022-04-01T12:42:05.800Z [DEBUG] waypoint.runner.agent: handled our one job in ODR mode, exiting
+2022-04-01T12:42:05.800Z [INFO]  waypoint.runner.agent: quit request received, gracefully stopping runner
+2022-04-01T12:42:05.800Z [WARN]  waypoint.runner.agent.runner.config.watcher: exiting due to context ended
+2022-04-01T12:42:05.800Z [WARN]  waypoint.runner.agent.runner.config_recv: EOF or cancellation received, graceful close of runner config stream
+2022-04-01T12:42:05.800Z [WARN]  waypoint: context cancelled, stopping interrupt listener loop

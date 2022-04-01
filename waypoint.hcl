@@ -15,7 +15,7 @@ app "website" {
 
     registry {
       use "docker" {
-        image = "797645259670.dkr.ecr.eu-west-3.amazonaws.com/jamie-dev/smallwins"
+        image = "797645259670.dkr.ecr.eu-west-3.amazonaws.com/smallwins"
         tag   = gitrefpretty()
       }
     }
