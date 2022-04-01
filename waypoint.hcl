@@ -15,9 +15,9 @@ app "website" {
 
     registry {
       use "aws-ecr" {
-        region = "eu-west-3"
-        image  = "797645259670.dkr.ecr.eu-west-3.amazonaws.com/smallwins"
-        tag    = gitrefpretty()
+        region     = "eu-west-3"
+        repository = "smallwins"
+        tag        = gitrefpretty()
       }
     }
   }
