@@ -15,7 +15,7 @@ app "website" {
 
     registry {
       use "docker" {
-        image = "registry.registry.svc.cluster.local:30000/jgwhite/smallwins"
+        image = "797645259670.dkr.ecr.eu-west-3.amazonaws.com/jamie-dev/smallwins"
         tag   = gitrefpretty()
       }
     }
@@ -27,7 +27,17 @@ app "website" {
 
   release {
     use "kubernetes" {
-      node_port = 30001
+      ingress "http" {
+        annotations = {
+          "kubernetes.io/ingress.class" = "nginx"
+          "cert-manager.io/issuer"      = "letsencrypt-prod"
+        }
+        host = "smallwins.club"
+        tls {
+          hosts       = ["smallwins.club"]
+          secret_name = "smallwins-club-tls"
+        }
+      }
     }
   }
 }
