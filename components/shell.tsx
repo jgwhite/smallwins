@@ -3,7 +3,7 @@ import { FC } from "react";
 const Shell: FC = ({ children }) => {
   return (
     <div className="min-h-full">
-      <div className="bg-white shadow-sm">
+      <div className="bg-pink-500 shadow-sm">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex">
