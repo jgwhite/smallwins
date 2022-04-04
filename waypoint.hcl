@@ -4,8 +4,10 @@ runner {
   enabled = true
 
   data_source "git" {
-    url = "https://github.com/jgwhite/smallwins.git"
-    ref = "main"
+    url      = "https://github.com/jgwhite/smallwins.git"
+    ref      = "main"
+    poll     = enabled
+    interval = "30s"
   }
 }
 
