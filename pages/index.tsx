@@ -1,19 +1,20 @@
-import type { NextPage } from "next";
 import Head from "next/head";
+import Shell from "../components/shell";
+import { EmojiHappyIcon } from "@heroicons/react/outline";
 
-const Home: NextPage = () => {
+const Home = () => {
   return (
     <>
       <Head>
         <title>Small Wins</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex h-screen">
-        <nav className="px-3 py-2 bg-gray-700">
-          <h1 className="text-xl font-semibold text-white">Small Wins</h1>
-        </nav>
-        <div className="px-3 py-2">Hello!</div>
-      </main>
+      <Shell>
+        <h1 className="flex items-center gap-2 text-2xl">
+          <EmojiHappyIcon className="w-6 h-6" />
+          Hello!
+        </h1>
+      </Shell>
     </>
   );
 };
