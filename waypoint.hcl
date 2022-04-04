@@ -1,4 +1,4 @@
-project = "demo"
+project = "remote-ops"
 
 runner {
   enabled = true
