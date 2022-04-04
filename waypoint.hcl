@@ -9,8 +9,7 @@ runner {
   }
 
   poll {
-    enabled  = true
-    interval = "30s"
+    enabled  = false
   }
 }
 
