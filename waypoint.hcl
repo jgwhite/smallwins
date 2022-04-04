@@ -1,4 +1,4 @@
-project = "smallwins-demo"
+project = "demo"
 
 runner {
   enabled = true
