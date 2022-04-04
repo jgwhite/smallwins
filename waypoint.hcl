@@ -20,7 +20,7 @@ app "website" {
     registry {
       use "aws-ecr" {
         region     = "eu-west-3"
-        repository = "smallwins"
+        repository = "remote-ops-demo-website"
         tag        = gitrefpretty()
       }
     }
